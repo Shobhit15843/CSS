@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./navbar.css">
+  <link rel="stylesheet" href="./left.css">
+  <!-- <style>
+
+    .container{
+      display: flex;
+      padding: 10px;
+      padding-left: 32px;
+      gap: 10px;
+    }
+    .left-section{
+      width: 70%;
+      height: 100vh;
+      background-color: white;
+
+    }
+    .right-section{
+      width: 30%;
+      height: 100vh;
+      background-color: blue;
+
+    }
+    .stickywala{
+      display: flex;
+      gap: 30px;
+      padding: 10px;
+      border-bottom: 2px solid black;
+      position: sticky;
+      top: 70px;
+      background-color: white;
+    }
+    #beta{
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 4px;
+      background-color: rgb(174, 170, 170);
+
+    }
+
+     .authorinfo{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px;
+    }
+    .author span {
+  font-size: 16px;
+}
+.author svg{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+
+
+} 
+
+.main{
+  display: grid;
+   grid-template-columns: 2fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+  height: 200px;
+  padding: 20px;
+  
+  
+  
+}
+#author{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  
+  height: 30px;
+}
+#info{
+
+  height: 170px;
+}
+#pic{
+
+  height: 170px;
+}
+#reach{
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  height: 30px;
+}
+  img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+
+  .reachinfo svg{
+    width: 30px;
+  height: 20px;
+ 
+  object-fit: cover;
+  }
+  .reachinfo{
+    padding: 5px;
+  }
+  .info{
+    text-align:left;
+    padding-top: 10px;
+    padding-left: 20px;
+
+  }
+
+
+  </style> -->
+
+ <link rel="stylesheet" href="./right.css">
+
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="logoinfo">
+      
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.6006 17.5098C20.8286 17.5563 21 17.7583 21 18C21 18.2417 20.8286 18.4437 20.6006 18.4902L20.5 18.5H3.5C3.22386 18.5 3 18.2761 3 18C3 17.7239 3.22386 17.5 3.5 17.5H20.5L20.6006 17.5098ZM20.6006 11.5098C20.8286 11.5563 21 11.7583 21 12C21 12.2417 20.8286 12.4437 20.6006 12.4902L20.5 12.5H3.5C3.22386 12.5 3 12.2761 3 12C3 11.7239 3.22386 11.5 3.5 11.5H20.5L20.6006 11.5098ZM20.6006 5.50977C20.8286 5.55629 21 5.75829 21 6C21 6.24171 20.8286 6.44371 20.6006 6.49023L20.5 6.5H3.5C3.22386 6.5 3 6.27614 3 6C3 5.72386 3.22386 5.5 3.5 5.5H20.5L20.6006 5.50977Z" fill="currentColor"></path></svg>
+
+     <p>Medium</p> 
+
+      <div class="searchbox">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.09234 11.06C4.09234 10.1473 4.27211 9.24358 4.62138 8.40036C4.97065 7.55715 5.48258 6.79099 6.12795 6.14562C6.77332 5.50026 7.53948 4.98832 8.38269 4.63905C9.2259 4.28978 10.1297 4.11001 11.0423 4.11001C11.955 4.11001 12.8588 4.28978 13.702 4.63905C14.5452 4.98832 15.3114 5.50026 15.9567 6.14562C16.6021 6.79099 17.114 7.55715 17.4633 8.40036C17.8126 9.24358 17.9923 10.1473 17.9923 11.06C17.9923 12.9033 17.2601 14.671 15.9567 15.9744C14.6534 17.2778 12.8856 18.01 11.0423 18.01C9.19909 18.01 7.43133 17.2778 6.12795 15.9744C4.82457 14.671 4.09234 12.9033 4.09234 11.06ZM11.0423 3.01001C9.75141 3.01124 8.4797 3.32292 7.33449 3.91876C6.18929 4.51459 5.20418 5.37711 4.46226 6.43355C3.72034 7.48999 3.24337 8.70937 3.07159 9.98883C2.89981 11.2683 3.03825 12.5703 3.47525 13.785C3.91224 14.9997 4.63497 16.0915 5.58245 16.9683C6.52994 17.8451 7.6744 18.4812 8.9193 18.8229C10.1642 19.1646 11.473 19.2019 12.7353 18.9316C13.9977 18.6613 15.1765 18.0915 16.1723 17.27L19.9223 21.02C19.9727 21.078 20.0345 21.1251 20.1039 21.1582C20.1732 21.1913 20.2487 21.2098 20.3255 21.2125C20.4023 21.2152 20.4788 21.2021 20.5504 21.1739C20.6219 21.1458 20.6868 21.1032 20.7412 21.0488C20.7955 20.9945 20.8381 20.9295 20.8662 20.858C20.8944 20.7865 20.9075 20.71 20.9048 20.6332C20.9021 20.5563 20.8836 20.4809 20.8505 20.4116C20.8174 20.3422 20.7704 20.2804 20.7123 20.23L16.9823 16.5C18.0418 15.3483 18.7426 13.9128 18.999 12.3691C19.2554 10.8253 19.0564 9.24032 18.4261 7.80795C17.7959 6.37559 16.7618 5.15798 15.4504 4.30407C14.1391 3.45017 12.6072 2.997 11.0423 3.00001V3.01001Z" fill="currentColor"></path></svg>
+
+      <input type="text" placeholder="Search" >
+      </div>
+
+      
+    </div>
+
+
+    <div class="userinfo">
+      <div class="buttonbox">
+         <button>
+        <img src="./icons8-qr-code-50.png" alt="" srcset="">
+
+        
+        Get App
+      </button>
+      </div>
+     
+
+      <div class="other">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 4C14.2761 4 14.5 3.77614 14.5 3.5C14.5 3.22386 14.2761 3 14 3V4ZM21 10C21 9.72386 20.7761 9.5 20.5 9.5C20.2239 9.5 20 9.72386 20 10H21ZM14 3H4V4H14V3ZM3 4V20H4V4H3ZM4 21H20V20H4V21ZM21 20V10H20V20H21ZM20 21C20.5523 21 21 20.5523 21 20H20V21ZM3 20C3 20.5523 3.44771 21 4 21V20H3ZM4 3C3.44772 3 3 3.44772 3 4H4H4V3Z" fill="currentColor"></path><path d="M17.5 4.5L9.04173 12.9583C9.01429 12.9857 8.99361 13.0192 8.98134 13.056L8.15811 15.5257C8.09297 15.7211 8.2789 15.907 8.47434 15.8419L10.944 15.0187C10.9808 15.0064 11.0143 14.9857 11.0417 14.9583L19.5 6.5M17.5 4.5L19.8232 2.17678C19.9209 2.07915 20.0791 2.07915 20.1768 2.17678L21.8232 3.82322C21.9209 3.92085 21.9209 4.07915 21.8232 4.17678L19.5 6.5M17.5 4.5L19.5 6.5" stroke="currentColor"></path></svg>Write
+
+
+
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18.5C15 20.1569 13.6569 21.5 12 21.5C10.3431 21.5 9 20.1569 9 18.5" stroke="currentColor" stroke-linecap="round"></path><path d="M5.5 10.532V9C5.5 5.41015 8.41015 2.5 12 2.5C15.5899 2.5 18.5 5.41015 18.5 9V10.532C18.5 11.9522 19.0642 13.3142 20.0683 14.3183L20.1 14.35C20.3561 14.6061 20.5 14.9535 20.5 15.3157V18.25C20.5 18.3881 20.3881 18.5 20.25 18.5H3.75C3.61193 18.5 3.5 18.3881 3.5 18.25V15.3157C3.5 14.9535 3.64388 14.6061 3.9 14.35L3.93165 14.3183C4.93585 13.3142 5.5 11.9522 5.5 10.532Z" stroke="currentColor" stroke-linejoin="round"></path></svg> 
+      <img src="./shobhit.jpg" alt="" srcset=""   width: 20px;
+  height: 20px; id="my">
+
+      </div>
+
+
+      
+
+      
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="left-section">
+
+      <div class="stickywala">
+        <span>For you</span>
+        <span>Activity <span id="beta">Beta</span></span>
+        
+
+        
+      </div>
+      
+
+      <div class="main">
+        <div class="author" id="author">
+        <div class="authorinfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+        <span>Shobhit Gupta</span>
+        <span> . </span>
+        <span>12 sept</span>
+
+        
+
+      </div>
+
+        </div>
+        
+        <div class="info" id="info">
+          <div><h2>The honesty is the best policy , leads to bons</h2></div>
+          <div>the world keeps saying this</div>
+
+        </div>
+
+        <div class="pic" id="pic">
+          <img src="./image.png" alt="" srcset="">
+
+        </div>
+
+        <div class="reach" id="reach">
+          <div class="reachinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>12.3k
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1
+              
+              .236-1.167z"/></svg>34.5k
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>36
+          </div>
+        </div>
+
+      </div>
+
+         <div class="main">
+        <div class="author" id="author">
+        <div class="authorinfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+        <span>Shobhit Gupta</span>
+        <span> . </span>
+        <span>12 sept</span>
+
+        
+
+      </div>
+
+        </div>
+        
+        <div class="info" id="info">
+          <div><h2>The honesty is the best policy , leads to bons</h2></div>
+          <div>the world keeps saying this</div>
+
+        </div>
+
+        <div class="pic" id="pic">
+          <img src="./image.png" alt="" srcset="">
+
+        </div>
+
+        <div class="reach" id="reach">
+          <div class="reachinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>12.3k
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1
+              
+              .236-1.167z"/></svg>34.5k
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>36
+          </div>
+        </div>
+
+      </div>
+
+         <div class="main">
+        <div class="author" id="author">
+        <div class="authorinfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+        <span>Shobhit Gupta</span>
+        <span> . </span>
+        <span>12 sept</span>
+
+        
+
+      </div>
+
+        </div>
+        
+        <div class="info" id="info">
+          <div><h2>The honesty is the best policy , leads to bons</h2></div>
+          <div>the world keeps saying this</div>
+
+        </div>
+
+        <div class="pic" id="pic">
+          <img src="./image.png" alt="" srcset="">
+
+        </div>
+
+        <div class="reach" id="reach">
+          <div class="reachinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>12.3k
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1
+              
+              .236-1.167z"/></svg>34.5k
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>36
+          </div>
+        </div>
+
+      </div>
+
+         <div class="main">
+        <div class="author" id="author">
+        <div class="authorinfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+        <span>Shobhit Gupta</span>
+        <span> . </span>
+        <span>12 sept</span>
+
+        
+
+      </div>
+
+        </div>
+        
+        <div class="info" id="info">
+          <div><h2>The honesty is the best policy , leads to bons</h2></div>
+          <div>the world keeps saying this</div>
+
+        </div>
+
+        <div class="pic" id="pic">
+          <img src="./image.png" alt="" srcset="">
+
+        </div>
+
+        <div class="reach" id="reach">
+          <div class="reachinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>12.3k
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1
+              
+              .236-1.167z"/></svg>34.5k
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>36
+          </div>
+        </div>
+
+      </div>
+
+         <div class="main">
+        <div class="author" id="author">
+        <div class="authorinfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+        <span>Shobhit Gupta</span>
+        <span> . </span>
+        <span>12 sept</span>
+
+        
+
+      </div>
+
+        </div>
+        
+        <div class="info" id="info">
+          <div><h2>The honesty is the best policy , leads to bons</h2></div>
+          <div>the world keeps saying this</div>
+
+        </div>
+
+        <div class="pic" id="pic">
+          <img src="./image.png" alt="" srcset="">
+
+        </div>
+
+        <div class="reach" id="reach">
+          <div class="reachinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>12.3k
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1
+              
+              .236-1.167z"/></svg>34.5k
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>36
+          </div>
+        </div>
+
+      </div>
+         <div class="main">
+        <div class="author" id="author">
+        <div class="authorinfo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="10" r="3"/><path d="M7 20.662V19a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v1.662"/></svg>
+        <span>Shobhit Gupta</span>
+        <span> . </span>
+        <span>12 sept</span>
+
+        
+
+      </div>
+
+        </div>
+        
+        <div class="info" id="info">
+          <div><h2>The honesty is the best policy , leads to bons</h2></div>
+          <div>the world keeps saying this</div>
+
+        </div>
+
+        <div class="pic" id="pic">
+          <img src="./image.png" alt="" srcset="">
+
+        </div>
+
+        <div class="newreach">
+          <div class="reach" id="reach">
+          <div class="reachinfo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart-handshake"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>12.3k
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-circle"><path d="M19.95 10.05a7 7 0 011.412 7.872 1 1 0 00-.058.787l.675 2.089a1 1 0 01-1.236 1.168l-2.155-.631a1 1 0 00-.745.06 7 7 0 01-7.793-1.445"/><path d="M2.696 12.708a1 1 0 00-.058-.785 7 7 0 113.518 3.473 1 1 0 00-.744-.061l-2.155.63a1 1 0 01-1
+              
+              .236-1.167z"/></svg>34.5k
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cable"><path d="M17 19a1 1 0 0 1-1-1v-2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2a1 1 0 0 1-1 1z"/><path d="M17 21v-2"/><path d="M19 14V6.5a1 1 0 0 0-7 0v11a1 1 0 0 1-7 0V10"/><path d="M21 21v-2"/><path d="M3 5V3"/><path d="M4 10a2 2 0 0 1-2-2V6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2a2 2 0 0 1-2 2z"/><path d="M7 5V3"/></svg>36
+
+
+              
+
+
+              
+          </div>
+        </div>
+
+        
+
+
+        </div>
+
+        
+      </div>
+      
+
+
+
+     
+
+      
+
+    
+    </div>
+    <div class="right-section">
+
+      <div class="mainright">
+       <div><b>Staff Picks</b></div> 
+       <br>
+        <section>
+        
+          <span class="new"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-ellipsis"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+          </span>
+          
+          <span style="font-size: large;" class="new">in life without children by jess hamlin</span>
+          <br>
+          <br>
+
+          <div><h2>I Wanted a child , and I Wanted a life without One </h2></div>
+          <br>
+          <div>sept 30</div>
+
+
+
+        </section>
+
+        <BR></BR>
+        <section>
+        
+          <span class="new"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-ellipsis"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+          </span>
+          
+          <span style="font-size: large;" class="new">Do Something Of Your Own</span>
+          <br>
+          <br>
+
+          <div><h2>I Wanted a child , But not Marriage</h2></div>
+          <br>
+          <div>sept 30</div>
+
+
+
+       </section>
+       <br><br>
+
+        <section>
+        
+          <span class="new"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-ellipsis"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/></svg>
+          </span>
+          
+          <span style="font-size: large;" class="new">in life without children by jess hamlin</span>
+          <br>
+          <br>
+
+          <div><h2>I Wanted a child , and I Wanted a life without One </h2></div>
+          <br>
+          <div>sept 30</div>
+
+
+
+       </section>
+       <br><br>
+
+       <div class="rec">
+        <div><b>Recommended topics</b></div>
+        <br>
+        <div class="topics">
+          <span class="add">Data science</span>
+          <span class="add">Eengineering</span>
+          <span class="add">Physics</span>
+          <span class="add">english</span>
+          <span class="add">maths</span>
+          <span class="add">Data science</span>
+          <span class="add">Eengineering</span>
+          <span class="add">Physics</span>
+          <span class="add">english</span>
+          <span class="add">maths</span>
+          <span class="add">Data science</span>
+          <span class="add">Eengineering</span>
+          <span class="add">Physics</span>
+          <span class="add">english</span>
+          <span class="add">maths</span>
+        </div>
+
+
+
+
+       </div>
+
+       
+
+
+
+
+      </div>
+
+      
+
+
+    </div>
+  </div>
+
+
+  
+  
+</body>
+</html>

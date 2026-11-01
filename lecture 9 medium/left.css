@@ -1,0 +1,139 @@
+.container{
+    display: flex;
+}
+
+.left-section {
+    width: 70%;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.stickywala {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 70px;
+    background-color: white;
+    z-index: 10;
+}
+
+#beta {
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 3px 7px;
+    background-color: #eee;
+    font-size: 12px;
+}
+
+
+/* ARTICLE */
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 160px;
+    grid-template-rows: auto 1fr auto;
+
+    grid-template-areas:
+        "author author"
+        "info pic"
+        "reach reach";
+
+    min-height: 250px;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+
+/* AUTHOR */
+
+#author {
+    grid-area: author;
+    height: auto;
+}
+
+.authorinfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+}
+
+.author svg {
+    width: 20px;
+    height: 20px;
+}
+
+.authorinfo span {
+    font-size: 14px;
+}
+
+
+/* TITLE + DESCRIPTION */
+
+#info {
+    grid-area: info;
+    height: auto;
+    padding: 10px 20px 10px 0;
+}
+
+#info h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+#info div:last-child {
+    color: #6b6b6b;
+    font-size: 16px;
+}
+
+
+/* IMAGE */
+
+#pic {
+    grid-area: pic;
+    height: 160px;
+}
+
+#pic img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
+
+
+/* REACH */
+
+#reach {
+    grid-area: reach;
+    height: auto;
+}
+
+.reachinfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0 0;
+}
+
+.reachinfo svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* NEW REACH */
+
+.newreach {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-section{
+    background-color: white;
+    width: 30%;
+    height: 100vh;
+}
